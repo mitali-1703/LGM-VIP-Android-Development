@@ -101,12 +101,13 @@ public class MainActivity extends AppCompatActivity {
 
                 //Looping thru the list named faces using for each loop
                 for (Face face:faces) {
-                    resultText = resultText.concat("\n"+i+".")
-                            .concat("\nSmile: "+face.getSmilingProbability()*100+"%")
-                            .concat("\nLeft Eye: "+face.getLeftEyeOpenProbability()*100+"%")
-                            .concat("\nRight Eye: "+face.getRightEyeOpenProbability()*100+"%");
+
+//                            .concat("\nSmile: "+face.getSmilingProbability()*100+"%")
+//                            .concat("\nLeft Eye: "+face.getLeftEyeOpenProbability()*100+"%")
+//                            .concat("\nRight Eye: "+face.getRightEyeOpenProbability()*100+"%");
                     i++;
                 }
+                resultText = resultText.concat("\n"+i+" Faces Detected");
 
                 if (faces.size() == 0)
                     Toast.makeText(MainActivity.this, "NO FACES", Toast.LENGTH_SHORT).show();
